@@ -1,0 +1,12 @@
+tap caskroom/versions
+
+cask install google-chrome 2> /dev/null
+cask install iterm2 2> /dev/null
+cask install virtualbox 2> /dev/null
+cask install vlc 2> /dev/null
+cask install day-o 2> /dev/null
+cask install bettertouchtool 2> /dev/null
+cask install spotify 2> /dev/null
+cask install dropbox 2> /dev/null
+cask install copy 2> /dev/null
+

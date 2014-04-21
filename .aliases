@@ -1,0 +1,54 @@
+#Terminal Aliases
+alias zs="source ~/.zshrc"
+alias L="| less"
+alias biggest='find -type f -printf '\''%s %p\n'\'' | sort -nr | head -n 40 | gawk "{ print \$1/1000000 \" \" \$2 \" \" \$3 \" \" \$4 \" \" \$5 \" \" \$6 \" \" \$7 \" \" \$8 \" \" \$9 }"'
+alias la="ls -a"
+alias lh="ls -ld .??*"
+alias p="python3"
+alias pip="pip3"
+
+#Brew Aliases
+alias br="brew"
+alias brc="brew cask"
+
+#Useful Tool Aliases
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias fs="stat -f \"%z bytes\""
+# Stuff I never really use but cannot delete either because of http://xkcd.com/530/
+alias stfu="osascript -e 'set volume output muted true'"
+alias pumpitup="osascript -e 'set volume 10'"
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+#TODO ALIASES
+alias daily="cat ~/daily.txt L"
+alias todo="cat ~/todo.txt L"
+alias etodo="v ~/todo.txt"
+alias logtodo="cat ~/todo.txt >> ~/personal.log"
+#LaTeX ALIASES
+alias latexmk='latexmk.pl -pdf -pvc'
+
+#SPOTIFY ALIASES
+alias spotify="osascript ~/.tools/SpotifyControl.scpt"
+# GLOBAL ALAISES
+alias -g L="|less" # Write L after a command to page through the output.
+alias -g TL='| tail -20'
+# EDITOR ALIASES
+alias v="vim"
+alias e="$EDITOR"
+#TMUX ALIASES
+alias t="tmux"
+alias tsource="tmux source-file ~/.tmux.conf"
+alias tk="tmux kill-session -t"
+alias tl="tmux ls"
+alias ta="tmux attach -t"
+#EDIT ALIASES
+alias eali="e ~/.aliases"
+
+# ZSH ALIASES
+alias zshconfig="e ~/.zshrc"
+alias ohmyzsh="e ~/.oh-my-zsh"
+
+#Show/Hide Desktop
+alias hidedesk="defaults write com.apple.finder CreateDesktop -bool false; killall Finder"
+alias showdesk="defaults write com.apple.finder CreateDesktop -bool true; killall Finder"
